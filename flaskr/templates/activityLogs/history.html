@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Activity Results{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  {% for event in events %}
+    <article class="events">
+      <header>
+        <div>
+          <h1>{{event['type'] }}</h1>
+          <div class="user">by user {{ event['user_id'] }} on {{ event['time']}}</div>
+        </div>
+      </header>
+      <div class="info">info: {{ event['data'] }}</div>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
