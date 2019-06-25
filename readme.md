@@ -6,3 +6,5 @@ Test run with:
  export FLASAPP=flaskr
  export FLASK_ENV=development
  flask run
+
+View dummy event log at: http://127.0.0.1:5000/activityLogs
