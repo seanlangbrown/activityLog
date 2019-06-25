@@ -28,6 +28,7 @@ def insert_event(event):
 def query_events(params):
     db = get_db()
     # TODO: return db.find()
+    return [{'type': 'test', 'user_id': 1000, 'time': '00:00:00', 'data': {'other': 'unknown'}}]
 
 
 def init_app(app):
